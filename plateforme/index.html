@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HackerLab Academie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side" id="side">
+    <div class="brand"><div class="logo">HL</div><div><b>HackerLab</b><small>Academie &mdash; prepare-toi</small></div></div>
+    <div class="who"><div class="rank" id="rk">Recrue</div>
+      <div class="bar"><i id="xpb"></i></div>
+      <div class="xpline"><span id="xpt">0 XP</span><span id="xpn"></span></div>
+    </div>
+    <nav class="nav">
+      <a href="#accueil" data-r="accueil"><span class="ico">QG</span><span>Mon QG</span></a>
+      <a href="#plan" data-r="plan"><span class="ico">&gt;</span><span>Le plan</span></a>
+      <div class="sec">Modules</div>
+      <div class="modlist" id="mods"></div>
+      <div class="sec">Outils</div>
+      <a href="#labo" data-r="labo"><span class="ico">&#9881;</span><span>Labo de decodage</span></a>
+      <a href="#terminal" data-r="terminal"><span class="ico">_</span><span>Terminal libre</span></a>
+      <a href="#arsenal" data-r="arsenal"><span class="ico">&#9776;</span><span>Arsenal (aide-memoire)</span></a>
+      <a href="#glossaire" data-r="glossaire"><span class="ico">A</span><span>Glossaire</span></a>
+    </nav>
+  </aside>
+  <div class="main">
+    <div class="topbar"><button class="btn sm" id="menu" type="button" aria-label="Menu">&#9776; Menu</button><b>HackerLab Academie</b></div>
+    <div id="view"></div>
+  </div>
+</div>
+<button class="btn pri proftab" id="proftab" type="button" hidden>Demander au Prof</button>
+<div class="profpanel" id="profpanel" aria-label="Prof IA">
+  <header><b style="font-family:var(--font-display);color:var(--ok)">Prof</b><span class="muted" style="font-size:.78rem">ton formateur</span><span class="spacer"></span><button class="btn sm" id="profnew" type="button">Nouveau</button><button class="btn sm" id="profclose" type="button">Fermer</button></header>
+  <div class="profmsgs" id="profmsgs"><div class="pm a">Salut ! Je suis ton prof. Le Prof IA fonctionne uniquement sur la version en ligne (lien claude.ai). En local, utilise les indices de chaque challenge.</div></div>
+  <form id="profform"><input type="text" id="profq" placeholder="Pose ta question..." autocomplete="off" aria-label="Question au prof"><button class="btn pri" type="submit">Envoyer</button></form>
+</div>
+<div class="toast" id="toast"></div>
+
+<!-- Code decoupe en fichiers (structure de projet) ; l'ordre de chargement compte -->
+<script src="js/terminal.js"></script>
+<script src="contenu/fondations.js"></script>
+<script src="contenu/avance.js"></script>
+<script src="contenu/avance2.js"></script>
+<script src="contenu/avance3.js"></script>
+<script src="contenu/avance4.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

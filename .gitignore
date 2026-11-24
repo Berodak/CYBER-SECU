@@ -1,0 +1,11 @@
+# Systeme
+.DS_Store
+Thumbs.db
+desktop.ini
+# Editeurs
+.vscode/
+.idea/
+*.swp
+# Divers
+*.log
+node_modules/
